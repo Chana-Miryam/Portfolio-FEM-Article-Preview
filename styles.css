@@ -99,14 +99,67 @@ img {
   border-radius: 50%;
 }
 
+.share:hover { 
+  cursor: pointer;
+  background-color: hsl(210, 46%, 75%);
+}
+
 .arrow {
   width: 50%;
   height: auto;
   margin: 25%;
 }
 
-#page-container {
+.avatar-container-active {
+  display: none;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "share-text facebook twitter pinterest . share-active";
+  padding: 0 10% 10% 10%; 
+  border-radius: 0 0 10px 10px; 
+  background-color: hsl(217, 19%, 35%); 
+}
+
+.share-text { 
   position: relative;
+  top: 60%; 
+  color:hsl(212, 23%, 69%); 
+  font-size: 13px;  
+}
+
+.facebook, .twitter, .pinterest  { 
+  background-color: hsl(217, 19%, 35%);
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  position: relative;
+  left: 5%; 
+  top: 60%; 
+}
+
+.share-active {
+  position: relative;
+  left: 80%; 
+  top: 40%; 
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: hsl(214, 17%, 51%);
+}
+
+.share-active:hover { 
+  cursor: pointer;
+  background-color: hsl(210, 46%, 75%);
+}
+
+.arrow-active {
+  width: 50%;
+  height: auto;
+  margin: 25%;
+}
+
+
+#page-container {
+  position: relative;      /* Helps in Footer alignment */
   min-height: 100vh;
 }
 

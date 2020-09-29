@@ -14,6 +14,8 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -33,15 +35,25 @@
                 <br>
                 </div>
 
-                <div class="avatar-container">
+                <div class="avatar-container" id="avatar-container">
                 <img class="avatar" src="images/avatar-michelle.jpg" alt="Avatar">
                     <div class="name-date">     
                     <p class="name">Michelle Appleton</p>
                     <p class="date">28 Jun 2020</p></div>
-                    <div class="share">
+                    <div class="share" id="share" onClick="shareClicked()">
                         <img class = "arrow" src="images/icon-share.svg" alt="Share icon">
                     </div>
                 </div>
+
+                <div class="avatar-container-active" id="avatar-container-active">
+                    <span class="share-text">S H A R E </span>
+                    <img class = " icon facebook" src="images/icon-facebook.svg" alt="Facebook icon">
+                    <img class = "icon twitter" src="images/icon-twitter.svg" alt="Twitter icon">
+                    <img class = "icon pinterest" src="images/icon-pinterest.svg" alt="Pinterest icon">
+                    <div class="icon share-active" id="share-active" onClick="shareClicked2()">
+                        <img class = "arrow-active" src="images/icon-share-white.svg" alt="Share icon">
+                    </div>
+                    </div>
 
             </div>
         </div>
