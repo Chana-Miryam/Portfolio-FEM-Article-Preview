@@ -1,70 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
-  
-  <title>Frontend Mentor | Article preview component</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
 
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <title>Frontend Mentor | Article preview component</title>
 
-  <script src="script.js" defer></script>
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+
+    <script src="script.js" defer></script>
 </head>
 
 <body>
     <div id="page-container">
-    <div id="content-wrap">
+        <div id="content-wrap">
 
-        <div class="container">
-            <div class="grid">
-                <div class="box1"> 
-                    <img src="images/drawers.jpg" alt="Drawer">
-                </div>
-
-                <div class="box2">
-                <br>
-                <p class="headline">Shift the overall look and feel by adding these wonderful touches to furniture in your home</p>
-                <p class="text">Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.</p>
-                <br>
-                </div>
-
-                <div class="avatar-container" id="avatar-container">
-                <img class="avatar" src="images/avatar-michelle.jpg" alt="Avatar">
-                    <div class="name-date">     
-                    <p class="name">Michelle Appleton</p>
-                    <p class="date">28 Jun 2020</p></div>
-                    <div class="share" id="share" onClick="shareClicked()">
-                        <img class = "arrow" src="images/icon-share.svg" alt="Share icon">
-                    </div>
-                </div>
-
-                <div class="avatar-container-active" id="avatar-container-active">
-                    <span class="share-text">S H A R E </span>
-                    <img class = " icon facebook" src="images/icon-facebook.svg" alt="Facebook icon">
-                    <img class = "icon twitter" src="images/icon-twitter.svg" alt="Twitter icon">
-                    <img class = "icon pinterest" src="images/icon-pinterest.svg" alt="Pinterest icon">
-                    <div class="icon share-active" id="share-active" onClick="shareClicked2()">
-                        <img class = "arrow-active" src="images/icon-share-white.svg" alt="Share icon">
-                    </div>
+            <div class="container">
+                <div class="grid">
+                    <div class="box1">
+                        <img src="images/drawers.jpg" alt="Drawer">
                     </div>
 
+                    <div class="boxWithAvatar">
+                        <div class="box2">
+                            <br>
+                            <p class="headline">Shift the overall look and feel by adding these wonderful touches to
+                                furniture in your home</p>
+                            <p class="text">Ever been in a room and felt like something was missing? Perhaps it felt
+                                slightly bare and uninviting. I’ve got some simple tips to help you make any room feel
+                                complete.</p>
+                            <br>
+                        </div>
+
+                        <div class="avatar-container" id="avatar-container">
+                            <img class="avatar" src="images/avatar-michelle.jpg" alt="Avatar">
+                            <div class="name-date">
+                                <p class="name">Michelle Appleton</p>
+                                <p class="date">28 Jun 2020</p>
+                            </div>
+                            <div class="share" id="share" onClick="shareClicked()">
+                                <img class="arrow" src="images/icon-share.svg" alt="Share icon">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="avatar-container-active" id="avatar-container-active">
+                        <span class="share-text">S H A R E </span>
+                        <img class=" icon facebook" src="images/icon-facebook.svg" alt="Facebook icon">
+                        <img class="icon twitter" src="images/icon-twitter.svg" alt="Twitter icon">
+                        <img class="icon pinterest" src="images/icon-pinterest.svg" alt="Pinterest icon">
+                        <div class="icon share-active" id="share-active" onClick="shareClicked2()">
+                            <img class="arrow-active" src="images/icon-share-white.svg" alt="Share icon">
+                        </div>
+                    </div>
+
+
+                </div>
             </div>
         </div>
-    </div>
     </div>
 
     <footer>
         <div class="attribution">
-            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
             Coded by <a href="#">me!</a>.
         </div>
     </footer>
 </body>
+
 </html>

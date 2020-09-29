@@ -7,7 +7,7 @@ body {
   height: 100%;
   background-color: hsl(210, 46%, 95%);
   font-family: Manrope, sans;
-  overflow: scroll; 
+  overflow: scroll;
 }
 
 .container {
@@ -26,13 +26,12 @@ body {
     "box1"
     "box2"
     "avatar";
-  margin: -15%;
 }
 
 img {
   display: block;
   width: 100%;
-  border-radius: 10px 10px 0 0; 
+  border-radius: 10px 10px 0 0;
 }
 
 .box1 {
@@ -57,7 +56,7 @@ img {
   font-size: 13px;
   color: hsl(214, 17%, 51%);
   font-weight: 500;
-  padding: 0 10%; 
+  padding: 0 10%;
 }
 
 .avatar-container {
@@ -65,13 +64,13 @@ img {
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-areas: "avatar name-date share-icon";
   background-color: white;
-  padding: 0 10% 10% 10%; 
-  border-radius: 0 0 10px 10px; 
+  padding: 0 10% 10% 10%;
+  border-radius: 0 0 10px 10px;
+  grid-area: avatar;
 }
 
 .avatar {
   display: inline-block;
-  grid-area: avatar;
   border-radius: 50%;
   width: 75%;
 }
@@ -99,7 +98,7 @@ img {
   border-radius: 50%;
 }
 
-.share:hover { 
+.share:hover {
   cursor: pointer;
   background-color: hsl(210, 46%, 75%);
 }
@@ -114,39 +113,41 @@ img {
   display: none;
   grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas: "share-text facebook twitter pinterest . share-active";
-  padding: 0 10% 10% 10%; 
-  border-radius: 0 0 10px 10px; 
-  background-color: hsl(217, 19%, 35%); 
+  padding: 0 10% 10% 10%;
+  border-radius: 0 0 10px 10px;
+  background-color: hsl(217, 19%, 35%);
 }
 
-.share-text { 
+.share-text {
   position: relative;
-  top: 60%; 
-  color:hsl(212, 23%, 69%); 
-  font-size: 13px;  
+  top: 60%;
+  color: hsl(212, 23%, 69%);
+  font-size: 13px;
 }
 
-.facebook, .twitter, .pinterest  { 
+.facebook,
+.twitter,
+.pinterest {
   background-color: hsl(217, 19%, 35%);
   width: 20px;
   height: 20px;
   border-radius: 5px;
   position: relative;
-  left: 5%; 
-  top: 60%; 
+  left: 5%;
+  top: 60%;
 }
 
 .share-active {
   position: relative;
-  left: 80%; 
-  top: 40%; 
+  left: 80%;
+  top: 40%;
   width: 35px;
   height: 35px;
   border-radius: 50%;
   background-color: hsl(214, 17%, 51%);
 }
 
-.share-active:hover { 
+.share-active:hover {
   cursor: pointer;
   background-color: hsl(210, 46%, 75%);
 }
@@ -157,19 +158,76 @@ img {
   margin: 25%;
 }
 
-
 #page-container {
-  position: relative;      /* Helps in Footer alignment */
+  position: relative; /* Helps in Footer alignment */
   min-height: 100vh;
 }
 
 #content-wrap {
-  padding-bottom: 2.5rem;    /* Footer height */
+  padding-bottom: 2.5rem; /* Footer height */
 }
 
 #footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 2.5rem;            /* Footer height */
+  height: 2.5rem; /* Footer height */
+}
+
+@media screen and (min-width: 730px) {
+  .grid {
+    width: 730px;
+    height: 280px;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas:
+      "box1"
+      "boxWithAvatar";
+  }
+
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .avatar {
+    border-radius: 50%;
+    width: 55%;
+  }
+
+  .avatar-container {
+    border-radius: 0 0 10px 0;
+  }
+
+  .box2 {
+    border-radius: 0 10px 0 0;
+  }
+
+  .avatar-container-active {
+    display: none;
+    position: relative;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "share-text facebook twitter pinterest . share-active";
+    padding: 0 10% 10% 10%;
+    border-radius: 0.4em;
+    background-color: hsl(217, 19%, 35%);
+    top: -250%;
+    left: 160%;
+  }
+
+  .avatar-container-active:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: hsl(217, 19%, 35%);
+    border-bottom: 0;
+    margin-left: -20px;
+    margin-bottom: -20px;
+  }
 }

@@ -1,10 +1,22 @@
-
-function shareClicked() {
+var mq = window.matchMedia("(max-width: 570px)");
+if (mq.matches) {
+  function shareClicked() {
     document.getElementById("avatar-container").style.display = "none";
-    document.getElementById("avatar-container-active").style.display = "grid"; // On click elem vanishes 
-};
+    document.getElementById("avatar-container-active").style.display = "grid"; // On click elem vanishes
+  }
 
-function shareClicked2() {
+  function shareClicked2() {
     document.getElementById("avatar-container").style.display = "grid";
-    document.getElementById("avatar-container-active").style.display = "none"; // On click elem vanishes 
-};
+    document.getElementById("avatar-container-active").style.display = "none"; // On click elem vanishes
+  }
+} else {
+  function shareClicked() {
+    document.getElementById("avatar-container").style.display = "grid";
+    document.getElementById("avatar-container-active").style.display = "grid"; // On click elem vanishes
+  }
+
+  function shareClicked2() {
+    document.getElementById("avatar-container").style.display = "grid";
+    document.getElementById("avatar-container-active").style.display = "none"; // On click elem vanishes
+  }
+}
