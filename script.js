@@ -3,7 +3,7 @@ window.addEventListener('resize', function () {
   window.location.reload(); 
 });
 
-var mq = window.matchMedia("(max-width: 729px)");
+var mq = window.matchMedia("(max-width: 800px)");
 if (mq.matches) {
   function shareClicked() {
     document.getElementById("avatar-container").style.display = "none";
