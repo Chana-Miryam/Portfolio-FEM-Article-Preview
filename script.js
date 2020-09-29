@@ -1,3 +1,8 @@
+window.addEventListener('resize', function () { 
+  "use strict";
+  window.location.reload(); 
+});
+
 var mq = window.matchMedia("(max-width: 729px)");
 if (mq.matches) {
   function shareClicked() {
