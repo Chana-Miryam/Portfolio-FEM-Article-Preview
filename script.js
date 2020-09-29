@@ -1,4 +1,4 @@
-var mq = window.matchMedia("(max-width: 570px)");
+var mq = window.matchMedia("(max-width: 729px)");
 if (mq.matches) {
   function shareClicked() {
     document.getElementById("avatar-container").style.display = "none";
@@ -9,6 +9,7 @@ if (mq.matches) {
     document.getElementById("avatar-container").style.display = "grid";
     document.getElementById("avatar-container-active").style.display = "none"; // On click elem vanishes
   }
+
 } else {
   function shareClicked() {
     document.getElementById("avatar-container").style.display = "grid";
