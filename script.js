@@ -1,12 +1,7 @@
-/* This event listener refreshes the page when the browser is resized. 
-Commented out to submit the project as a solution to Front End Mentor website. 
-
 window.addEventListener('resize', function () { 
   "use strict";
   window.location.reload(); 
 });
-
-*/
 
 var mq = window.matchMedia("(max-width: 729px)");
 if (mq.matches) {
