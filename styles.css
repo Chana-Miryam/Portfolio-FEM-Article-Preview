@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  background-color: hsl(210, 46%, 95%);
+  font-family: Manrope, sans;
+  overflow: scroll; 
+}
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.grid {
+  width: 327px;
+  height: 512px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "box1"
+    "box2"
+    "avatar";
+  margin: -15%;
+}
+
+img {
+  display: block;
+  width: 100%;
+  border-radius: 10px 10px 0 0; 
+}
+
+.box1 {
+  display: block;
+  grid-area: box1;
+}
+
+.box2 {
+  display: block;
+  grid-area: box2;
+  background-color: white;
+}
+
+.headline {
+  font-size: 16px;
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+  padding: 0 10% 5% 10%;
+}
+
+.text {
+  font-size: 13px;
+  color: hsl(214, 17%, 51%);
+  font-weight: 500;
+  padding: 0 10%; 
+}
+
+.avatar-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: "avatar name-date share-icon";
+  background-color: white;
+  padding: 0 10% 10% 10%; 
+  border-radius: 0 0 10px 10px; 
+}
+
+.avatar {
+  display: inline-block;
+  grid-area: avatar;
+  border-radius: 50%;
+  width: 75%;
+}
+
+.name-date {
+  grid-area: name-date;
+}
+
+.name {
+  font-weight: 700;
+  color: hsl(217, 19%, 35%);
+  font-size: 13px;
+}
+
+.date {
+  font-weight: 500;
+  color: hsl(214, 17%, 51%);
+  font-size: 13px;
+}
+
+.share {
+  background-color: hsl(210, 46%, 95%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.arrow {
+  width: 50%;
+  height: auto;
+  margin: 25%;
+}
